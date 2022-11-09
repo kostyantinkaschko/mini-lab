@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+}
+
+* {
+    outline: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 98px;
+    box-shadow: 5px 3px 3px 3px #e5e5e5;
+    width: 100%;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+header li:not(header li:first-child) {
+    margin: 0 0 0 53px;
+}
+
+header a {
+    color: #262626;
+    font-size: 15px;
+    font-family: "SegoeUIRegular";
+    text-align: right;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.logo {
+    margin: 20px 0 0 0;
+}
+
+.search {
+    position: relative;
+    display: flex;
+}
+
+
+.search input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    color: #262626;
+    font-size: 15px;
+    opacity: 0.702;
+    border: 1px solid #9999;
+    box-sizing: border-box;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.search input:focus {
+    color: #00dfff;
+    border-color: #00dfff;
+}
+
+.search img:focus {
+    filter: #00dfff;
+}
+
+.search button {
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    border-width: 0;
+    border-left: none;
+    position: absolute;
+    background: #fff;
+    top: 11px;
+    left: 186px;
+}
+
+.login {
+    margin: 20px 24px;
+}
+
+.login img {
+    margin-right: 24px;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.general {
+    background: url(../img/general-image.jpg);
+    height: 540px;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.general-info {
+    padding: 154px 70px 0;
+    width: 412px;
+}
+
+.general h1 {
+    font-size: 46px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Segoe UI";
+}
+
+.general p {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+    margin-bottom: 29px;
+}
+
+
+.general a {
+    padding: 14px 32px 16px 15px;
+    color: #262626;
+    font-size: 14px;
+    font-family: "SegoeUIRegular";
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: right;
+    background-color: #fff;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+.general img {
+    filter: brightness(0);
+}
+
+.general img {
+    padding-left: 8px;
+}
+
+.list{
+    margin-bottom: 66px;
+}
+
+.main-list figure,
+.list img {
+    width: 270px;
+}
+
+.main-list figure {
+    margin-right: 30px;
+}
+
+.main-list {
+    display: flex;
+}
+
+
+
+.list h2 {
+    margin: 60px 0 41px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    text-align: center;
+}
+
+.list h3 {
+    width: 269px;
+    height: 27px;
+    margin: 0;
+    padding-bottom: 11px;
+    font-size: 20px;
+    color: #0d0d0d;
+    font-weight: bold;
+    font-family: "Segoe UI";
+}
+
+.list p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 21px;
+    color: #262626;
+    font-family: "Segoe UI";
+}
+
+figure p:last-child {
+    padding-bottom: 17px;
+}
+
+.list a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #0067b8;
+    font-family: "Segoe UI";
+}
+
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+.prelast{
+    padding-bottom: 41px;
+}
+
+.last{
+    padding-bottom: 19px;
+}
+
+.freebie{
+    background: url(../img/general-image3.png);
+    height: 540px;
+}
+
+@font-face {
+    font-family: "SegoeUILight";
+    src: url("../fonts/SegoeUILight.eot");
+    src: url("../fonts/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/SegoeUILight.woff") format("woff"),
+        url("../fonts/SegoeUILight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "SegoeUIRegular";
+    src: url("../fonts/SegoeUIRegular.eot");
+    src: url("../fonts/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/SegoeUIRegular.woff") format("woff"),
+        url("../fonts/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100;
+}
