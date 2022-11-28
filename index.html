@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="img/main-logo.png" alt="Mini-lab магазин цифрових товарів">
+            <a href="index.html"><img src="img/main-logo.png" alt="Mini-lab магазин цифрових товарів"></a>
         </div>
         <div class="menu">
             <ul class="burger-menu">
@@ -36,10 +36,12 @@
         <div class="search">
             <form class="search" method="get" action="#">
                 <input class="search__input" type="search" placeholder="Пошук на сайті">
-                <button type="submit"><img src="img/search.png" alt="Купити ноутбук, телефон та інше"></button>
+                <button type="submit">
+                    <a class="search_button" href="#"></a>
+                </button>
             </form>
             <div class="login">
-                <img src="img/cart.png" alt="Товари в корзині">
+                <a href="#" class="cart"></a>
                 <a href="#">Вхід</a>
             </div>
         </div>
@@ -50,7 +52,7 @@
                 <h1>Цікавий планшет</h1>
                 <p>Розкрий потенціал свого пристрою разом з нами
                     всього за 250 грн/міс.</p>
-                <a href="#">придбати пристрій <img src="img/bracket.png" alt="Придбати ноутбук в кредит"></a>
+                <a href="#">придбати пристрій </a>
             </div>
         </div>
         <main>
@@ -102,69 +104,85 @@
             <div class="freebie">
                 <div class="free">
                     <h3>Отримай MacBook безкоштовно</h3>
-                    <p>Залишайтеся на зв’язку, використовуючи будь-які пристрої,
-                        за допомогою безкоштовної поштової служби.</p>
+                    <p>Залишайтеся на зв’язку, використовуючи будь-які пристрої, за допомогою безкоштовної поштової
+                        служби.</p>
                     <a href="#">придбати пристрій</a>
                 </div>
             </div>
             <div class="browsers">
                 <h4>Стежте за нами:</h4>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a class="ie" href="#"></a>
+                <a class="ch" href="#"></a>
+                <a class="op" href="#"></a>
             </div>
         </main>
-        <footer>
+    </div>
+    <footer>
+        <div class="wrapper">
             <div class="pages">
                 <div class="goods">
                     <h3>Що нового?</h3>
-                    <a href="#">Ліцензійні програми</a>
-                    <a href="#">Купити ключ</a>
+                    <ul>
+                        <li><a href="#">Ліцензійні програми</a></li>
+                        <li><a href="#">Купити ключ</a></li>
+                    </ul>
                 </div>
                 <div class="account">
                     <h3>Підтримка 24/7</h3>
-                    <a href="#">Обліковий запис</a>
-                    <a href="#">Лог завантажень</a>
-                    <a href="#">Повернення</a>
-                    <a href="#">Відстеження замовлення</a>
-                    <a href="#">Підтримка</a>
+                    <ul>
+                        <li><a href="#">Обліковий запис</a></li>
+                        <li><a href="#">Лог завантажень</a></li>
+                        <li><a href="#">Повернення</a></li>
+                        <li><a href="#">Відстеження замовлення</a></li>
+                        <li><a href="#">Підтримка</a></li>
+                    </ul>
                 </div>
                 <div class="education">
                     <h3>Освіта</h3>
-                    <a href="#">Навчання</a>
-                    <a href="#">Студенти</a>
-                    <a href="#">Для навчальних закладів</a>
-                    <a href="#">Спеціальні пропозиції для викладачів</a>
+                    <ul>
+                        <li><a href="#">Навчання</a></li>
+                        <li><a href="#">Студенти</a></li>
+                        <li><a href="#">Для навчальних закладів</a></li>
+                        <li><a href="#">Спеціальні пропозиції для викладачів</a></li>
+                    </ul>
                 </div>
                 <div class="business">
                     <h3>Бізнес</h3>
-                    <a href="#">Великий бізнес</a>
-                    <a href="#">Виробництво</a>
-                    <a href="#">Фінансові послуги</a>
+                    <ul>
+                        <li><a href="#">Великий бізнес</a></li>
+                        <li><a href="#">Виробництво</a></li>
+                        <li><a href="#">Фінансові послуги</a></li>
+                    </ul>
                 </div>
                 <div class="developer">
                     <h3>Розробка</h3>
-                    <a href="#">Центр розробників</a>
-                    <a href="#">Мережа</a>
-                    <a href="#">SkyNet</a>
+                    <ul>
+                        <li><a href="#">Центр розробників</a></li>
+                        <li><a href="#">Мережа</a></li>
+                        <li><a href="#">SkyNet</a></li>
+                    </ul>
                 </div>
                 <div class="company">
                     <h3>Компанія</h3>
-                    <a href="#">Вакансія</a>
-                    <a href="#">Конфіденційність</a>
-                    <a href="#">Інвертар</a>
+                    <ul>
+                        <li><a href="#">Вакансія</a></li>
+                        <li><a href="#">Конфіденційність</a></li>
+                        <li><a href="#">Інвертар</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer">
-                <a href="#"><img src="img/lang.png" alt="Безкоштовний MacBook"> Вибір мови (Українська)</a>
-                <a href="#">Контактні дані</a>
-                <a href="#">Положення про конфіденціальність</a>
-                <a href="#">Умови використання</a>
-                <a href="#">Відомості про рекламу</a>
-                <p>&copy; MiniLab 2018.</p>
+                <ul>
+                    <li><a class="lang" href="#">Вибір мови (Українська)</a></li>
+                    <li><a href="#">Контактні дані</a></li>
+                    <li><a href="#">Положення про конфіденціальність</a></li>
+                    <li><a href="#">Умови використання</a></li>
+                    <li><a href="#">Відомості про рекламу</a></li>
+                    <li><a href="#">&copy; MiniLab 2018.</a></li>
+                </ul>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 
 </html>

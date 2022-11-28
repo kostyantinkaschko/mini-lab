@@ -18,6 +18,7 @@ header ul {
     display: flex;
     list-style: none;
     padding: 0;
+    margin-top: 16px;
 }
 
 header li:not(header li:first-child) {
@@ -34,6 +35,7 @@ header a {
 }
 
 .logo {
+    position: relative;
     margin: 20px 0 0 0;
 }
 
@@ -41,6 +43,7 @@ header a {
     position: relative;
     display: flex;
 }
+
 
 
 .search input {
@@ -61,21 +64,67 @@ header a {
     border-color: #00dfff;
 }
 
-.search img:focus {
-    filter: #00dfff;
-}
+
 
 .search button {
-    padding: 10px;
-    color: white;
-    font-size: 17px;
     border-width: 0;
     border-left: none;
-    position: absolute;
-    background: #fff;
-    top: 11px;
-    left: 186px;
+    position: relative;
+    width: 0;
+    height: 0;
 }
+
+
+a.search_button {
+    position: relative;
+    left: -25px;
+    padding: 0 15px 2px 0;
+}
+
+.search_button:before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 22px;
+    width: 16px;
+    height: 21px;
+    background: url(../img/sprite.png) no-repeat 0 0;
+}
+
+.search_button:hover:before {
+    background-position: 0 -21px;
+}
+
+.login {
+    padding-left: 24px;
+}
+
+
+
+
+a.cart {
+    position: relative;
+    left: -25px;
+    padding: 0 15px 2px 0;
+}
+
+.cart:before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    width: 20px;
+    height: 21px;
+    background: url(../img/sprite.png) no-repeat -16px 0;
+}
+
+.cart:hover:before {
+    background-position: -16px -21px;
+}
+
+
+
+
 
 .login {
     margin: 20px 24px;
@@ -83,6 +132,24 @@ header a {
 
 .login img {
     margin-right: 24px;
+}
+
+.login a,
+.burger-menu li {
+    padding: 2px 0 4px 0;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 3px;
+    transition: all .5s ease;
+}
+
+.menu li:hover {
+    background: #f2f2f2;
+}
+
+.login a:hover {
+    border-color: #00dfff;
+    color: #00dfff;
 }
 
 .wrapper {
@@ -108,14 +175,19 @@ header a {
     font-size: 46px;
     color: #ffffff;
     font-weight: bold;
-    font-family: "Segoe UI";
+    font-family: "SegoeUIRegular";
 }
 
 .general p {
     font-size: 16px;
     color: #ffffff;
-    font-family: "Segoe UI";
+    font-family: "SegoeUIRegular";
     margin-bottom: 29px;
+}
+
+.general a,
+.free a {
+    position: relative;
 }
 
 
@@ -133,6 +205,52 @@ header a {
     letter-spacing: 1px;
 }
 
+.general a:before,
+.free a:before {
+    content: "";
+    position: absolute;
+    margin-top: 9px;
+    right: 17px;
+    width: 7px;
+    height: 7px;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+
+.general a:before {
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+}
+
+
+.free a:before {
+    right: 17px;
+    margin-top: 6px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.free a:hover:before {
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+}
+
+.general a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.general a:hover:before,
+.free a:hover:before {
+    margin-top: 6px;
+    transform: rotate(45deg);
+}
+
+.general a:hover:before {
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+}
+
 .general img {
     filter: brightness(0);
 }
@@ -141,7 +259,7 @@ header a {
     padding-left: 8px;
 }
 
-.list{
+.list {
     margin-bottom: 66px;
 }
 
@@ -168,7 +286,7 @@ header a {
     text-transform: uppercase;
     color: #0d0d0d;
     font-weight: bold;
-    font-family: "Segoe UI";
+    font-family: "SegoeUIRegular";
     text-align: center;
 }
 
@@ -180,7 +298,7 @@ header a {
     font-size: 20px;
     color: #0d0d0d;
     font-weight: bold;
-    font-family: "Segoe UI";
+    font-family: "SegoeUIRegular";
 }
 
 .list p {
@@ -188,7 +306,7 @@ header a {
     font-size: 15px;
     line-height: 21px;
     color: #262626;
-    font-family: "Segoe UI";
+    font-family: "SegoeUIRegular";
 }
 
 figure p:last-child {
@@ -200,8 +318,14 @@ figure p:last-child {
     letter-spacing: 1px;
     line-height: 20px;
     text-transform: uppercase;
+    text-decoration: none;
     color: #0067b8;
-    font-family: "Segoe UI";
+    font-family: "SegoeUIRegular";
+    transition: all .5s ease;
+}
+
+.list a:hover {
+    text-decoration: underline;
 }
 
 figure,
@@ -210,17 +334,199 @@ figcaption {
     padding: 0;
 }
 
-.prelast{
+.prelast {
     padding-bottom: 41px;
 }
 
-.last{
+.last {
     padding-bottom: 19px;
 }
 
-.freebie{
+.freebie {
     background: url(../img/general-image3.png);
     height: 540px;
+}
+
+.free {
+    padding: 72px 68px 0;
+    max-width: 423px;
+}
+
+.freebie h3 {
+    color: #0d0d0d;
+    font-size: 46px;
+    font-weight: bold;
+    font-family: "SegoeUIRegular";
+}
+
+.freebie p {
+    color: #0d0d0d;
+    font-size: 16px;
+    font-family: "SegoeUIRegular";
+    line-height: 24px;
+}
+
+.freebie a {
+    padding: 14px 32px 16px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-family: "SegoeUIRegular";
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: right;
+    background-color: #262626;
+    letter-spacing: 1px;
+}
+
+
+
+.freebie a:hover {
+    background-color: #fff;
+    color: #262626;
+}
+
+.freebie img {
+    padding-left: 8px;
+}
+
+.freebie a:hover img {
+    filter: invert(1);
+    transform: rotate(90deg);
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.browsers {
+    position: relative;
+    margin: 82px 50px;
+    text-align: center;
+
+}
+
+.browsers h4 {
+    opacity: 0.702;
+    font-size: 15px;
+    line-height: 30px;
+    color: #262626;
+    font-family: "SegoeUIRegular";
+}
+
+
+.browsers a {
+    margin-top: 17px;
+    padding-right: 42px;
+}
+
+
+.ie:before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #55acee url(../img/internet-explorer.png);
+    transition: all .2s ease;
+}
+
+.ie:hover:before {
+    background-position: 0 734px;
+}
+
+.ch:before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #55acee url(../img/chrome.png);
+    transition: all .3s ease;
+}
+
+.ch:hover:before {
+    background-position: 0 734px;
+}
+
+.op:before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #55acee url(../img/opera.png);
+    transition: all .2s ease;
+}
+
+.op:hover:before {
+    background-position: 0 734px;
+}
+
+.browsers a:hover img {
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+
+footer {
+    background-color: #f2f2f2;
+}
+
+footer li {
+    list-style: none;
+    padding-bottom: 19px;
+}
+
+.footer li:not(:last-child){
+    margin-right: 27px;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: #616161;
+    font-size: 12px;
+    font-family: "SegoeUIRegular";
+    border-bottom: 1px solid transparent;
+}
+
+footer a:hover {
+    border-color: #7c7c7c;
+}
+
+.pages {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.pages ul {
+    padding: 0;
+}
+
+.pages h3 {
+    font-size: 15px;
+    line-height: 24px;
+    color: #616161;
+    font-weight: bold;
+    font-family: "SegoeUIRegular";
+}
+
+.footer ul {
+    display: flex;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.footer li:first-child {
+    position: relative;
+    padding-right: 281px;
+}
+
+.lang:before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    width: 14px;
+    height: 14px;
+    background: url(../img/lang.png);
+    transition: all .3s ease;
 }
 
 @font-face {
