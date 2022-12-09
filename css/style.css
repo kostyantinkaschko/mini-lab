@@ -9,21 +9,17 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    margin-right: 98px;
-    box-shadow: 5px 3px 3px 3px #e5e5e5;
+    box-shadow: 0.707px 0.707px 4px #e5e5e5;
     width: 100%;
 }
 
 header ul {
     display: flex;
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin-top: 16px;
 }
 
-header li:not(header li:first-child) {
-    margin: 0 0 0 53px;
-}
 
 header a {
     color: #262626;
@@ -36,21 +32,31 @@ header a {
 
 .logo {
     position: relative;
-    margin: 20px 0 0 0;
+}
+
+.logo a:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -91px;
+    width: 97px;
+    height: 16px;
+    background: url(../img/main-logo.png);
 }
 
 .search {
     position: relative;
     display: flex;
+    margin-top: 6px;
+    height: 30px;
 }
 
 
 
 .search input {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
     color: #262626;
+    padding: 13px 9px 15px;
     font-size: 15px;
     opacity: 0.702;
     border: 1px solid #9999;
@@ -67,11 +73,13 @@ header a {
 
 
 .search button {
+    position: relative;
+    background: #fff;
+    height: 19px;
+    top: 10px;
+    left: -30px;
     border-width: 0;
     border-left: none;
-    position: relative;
-    width: 0;
-    height: 0;
 }
 
 
@@ -84,8 +92,8 @@ a.search_button {
 .search_button:before {
     content: "";
     position: absolute;
-    left: -8px;
-    top: 22px;
+    left: 25px;
+    top: -3px;
     width: 16px;
     height: 21px;
     background: url(../img/sprite.png) no-repeat 0 0;
@@ -96,9 +104,10 @@ a.search_button {
 }
 
 .login {
-    padding-left: 24px;
+    position: relative;
+    left: 46px;
+    top: 12px
 }
-
 
 
 
@@ -126,25 +135,66 @@ a.cart {
 
 
 
-.login {
-    margin: 20px 24px;
-}
 
-.login img {
-    margin-right: 24px;
-}
 
 .login a,
 .burger-menu li {
     padding: 2px 0 4px 0;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    border-radius: 3px;
     transition: all .5s ease;
 }
 
-.menu li:hover {
+.burger-menu li {
+    padding: 17px 34px 21px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.burger-sub {
+    position: relative;
+}
+
+.burger-sub:before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    bottom: 27px;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+
+.menu li:hover,
+.sub-menu {
     background: #f2f2f2;
+    border-color: #e5e5e5;
+}
+
+.burger-sub:hover:before {
+    transform: rotate(45deg);
+}
+
+.burger-sub:hover .sub-menu {
+    display: flex;
+}
+
+.flex{
+    display: flex;
+}
+
+.sub-menu{
+    display: none;
+    position: absolute;
+}
+
+
+
+.sub-menu ul{
+    display: inline-block;
 }
 
 .login a:hover {
@@ -343,7 +393,7 @@ figcaption {
 }
 
 .freebie {
-    background: url(../img/general-image3.png);
+    background: url(../img/general-image3.jpg);
     height: 540px;
 }
 
@@ -424,7 +474,7 @@ figcaption {
     position: absolute;
     width: 35px;
     height: 35px;
-    background: #55acee url(../img/internet-explorer.png);
+    background: #425daa url(../img/internet-explorer.jpg);
     transition: all .2s ease;
 }
 
@@ -437,7 +487,7 @@ figcaption {
     position: absolute;
     width: 35px;
     height: 35px;
-    background: #55acee url(../img/chrome.png);
+    background: #55acee url(../img/chrome.jpg);
     transition: all .3s ease;
 }
 
@@ -450,7 +500,7 @@ figcaption {
     position: absolute;
     width: 35px;
     height: 35px;
-    background: #55acee url(../img/opera.png);
+    background: #ed2b2f url(../img/opera.jpg);
     transition: all .2s ease;
 }
 
@@ -472,7 +522,7 @@ footer li {
     padding-bottom: 19px;
 }
 
-.footer li:not(:last-child){
+.footer li:not(:last-child) {
     margin-right: 27px;
 }
 
